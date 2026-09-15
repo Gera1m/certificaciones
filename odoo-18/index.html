@@ -5,124 +5,397 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Certificación Odoo 18 | Luis Gerardo Salva Luna</title>
-
   <meta name="description"
-        content="Certificación funcional de Odoo 18 obtenida por Luis Gerardo Salva Luna.">
+        content="Credencial profesional de la Certificación Funcional de Odoo 18 obtenida por Luis Gerardo Salva Luna.">
 
   <style>
+    :root {
+      --odoo: #714B67;
+      --odoo-dark: #56384f;
+      --text: #202124;
+      --muted: #697078;
+      --line: #e7e7e9;
+      --background: #f6f6f8;
+      --success: #218739;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f7;
-      color: #202124;
-      min-height: 100vh;
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: auto;
+      min-height: 72px;
+      padding: 0 28px;
+
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding: 30px 20px;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .card {
-      width: 100%;
-      max-width: 760px;
-      background: white;
-      border-radius: 18px;
-      padding: 50px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-    }
-
-    .badge {
-      display: inline-block;
-      background: #714b67;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 25px;
-    }
-
-    h1 {
-      font-size: 38px;
-      line-height: 1.15;
-      margin-bottom: 12px;
-    }
-
-    .nombre {
-      color: #714b67;
-      font-size: 22px;
-      font-weight: bold;
-      margin-bottom: 30px;
-    }
-
-    .descripcion {
-      color: #60646c;
-      line-height: 1.7;
-      margin-bottom: 35px;
-    }
-
-    .datos {
-      border-top: 1px solid #e5e5e5;
-      border-bottom: 1px solid #e5e5e5;
-      padding: 25px 0;
-      margin-bottom: 35px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
-
-    .dato span {
-      display: block;
-      color: #777;
-      font-size: 13px;
-      margin-bottom: 6px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .dato strong {
+    .brand {
+      font-weight: 750;
       font-size: 17px;
+      color: var(--text);
+      text-decoration: none;
     }
 
-    .boton {
-      display: inline-block;
-      background: #714b67;
-      color: white;
+    .back {
       text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 8px;
-      font-weight: bold;
+      color: var(--muted);
+      font-size: 14px;
       transition: 0.2s;
     }
 
-    .boton:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
+    .back:hover {
+      color: var(--odoo);
     }
 
-    .nota {
-      margin-top: 30px;
+    /* MAIN */
+
+    main {
+      max-width: 1180px;
+      margin: auto;
+      padding: 70px 28px 45px;
+    }
+
+    .credential {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      overflow: hidden;
+
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+
+      box-shadow: 0 20px 55px rgba(32, 33, 36, 0.08);
+    }
+
+    /* INFORMATION */
+
+    .info {
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      color: var(--odoo);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 60px);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+      max-width: 650px;
+    }
+
+    .holder {
+      font-size: 22px;
+      color: var(--odoo);
+      font-weight: 750;
+      margin-bottom: 22px;
+    }
+
+    .description {
+      max-width: 620px;
+      color: var(--muted);
+      font-size: 16px;
+      margin-bottom: 26px;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      width: fit-content;
+      padding: 9px 14px;
+      border-radius: 100px;
+
+      background: #edf8ef;
+      color: var(--success);
+
+      font-size: 14px;
+      font-weight: 700;
+
+      margin-bottom: 35px;
+    }
+
+    .check {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--success);
+      color: white;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
       font-size: 12px;
-      color: #8a8a8a;
-      line-height: 1.5;
     }
 
-    @media (max-width: 600px) {
-      .card {
-        padding: 30px 24px;
+    /* DATA */
+
+    .data {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+
+      padding: 28px 0;
+      margin-bottom: 32px;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px 35px;
+    }
+
+    .data-item span {
+      display: block;
+      color: #8a8f95;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 5px;
+    }
+
+    .data-item strong {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    /* BUTTONS */
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 13px 20px;
+      border-radius: 9px;
+
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 750;
+
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .primary {
+      background: var(--odoo);
+      color: white;
+    }
+
+    .primary:hover {
+      background: var(--odoo-dark);
+      transform: translateY(-2px);
+    }
+
+    .secondary {
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: white;
+    }
+
+    .secondary:hover {
+      background: #f7f7f8;
+      transform: translateY(-2px);
+    }
+
+    /* CERTIFICATE PREVIEW */
+
+    .preview-area {
+      background:
+        radial-gradient(circle at 80% 20%, rgba(113,75,103,.12), transparent 32%),
+        linear-gradient(145deg, #f4f0f3, #fafafa);
+
+      padding: 55px 45px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 700px;
+    }
+
+    .certificate-frame {
+      width: 100%;
+      max-width: 500px;
+
+      background: white;
+      padding: 12px;
+
+      border-radius: 14px;
+      border: 1px solid rgba(0,0,0,.08);
+
+      box-shadow:
+        0 25px 60px rgba(39, 28, 36, 0.18),
+        0 3px 10px rgba(39, 28, 36, 0.08);
+
+      transition: transform 0.25s;
+    }
+
+    .certificate-frame:hover {
+      transform: translateY(-4px);
+    }
+
+    .certificate-frame iframe {
+      display: block;
+      width: 100%;
+      height: 390px;
+      border: 0;
+      border-radius: 7px;
+      background: white;
+    }
+
+    .preview-caption {
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    /* DISCLAIMER */
+
+    .disclaimer {
+      max-width: 1180px;
+      margin: 25px auto 0;
+      padding: 0 5px;
+
+      color: #81868c;
+      font-size: 12px;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+
+    footer {
+      max-width: 1180px;
+      margin: auto;
+      padding: 30px 28px 45px;
+
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+
+      color: #8a8f95;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      main {
+        padding-top: 35px;
+      }
+
+      .credential {
+        grid-template-columns: 1fr;
+      }
+
+      .info {
+        padding: 42px 32px;
+      }
+
+      .preview-area {
+        min-height: auto;
+        padding: 40px 25px;
+      }
+
+      .certificate-frame {
+        max-width: 600px;
+      }
+
+      .certificate-frame iframe {
+        height: 430px;
+      }
+    }
+
+    @media (max-width: 550px) {
+
+      .nav {
+        padding: 0 20px;
+      }
+
+      main {
+        padding: 25px 15px;
+      }
+
+      .info {
+        padding: 35px 24px;
       }
 
       h1 {
-        font-size: 30px;
+        font-size: 38px;
+        letter-spacing: -1.3px;
       }
 
-      .datos {
+      .holder {
+        font-size: 19px;
+      }
+
+      .data {
         grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .preview-area {
+        padding: 28px 15px;
+      }
+
+      .certificate-frame iframe {
+        height: 300px;
+      }
+
+      footer {
+        flex-direction: column;
+        padding: 25px 20px 35px;
       }
     }
   </style>
@@ -130,59 +403,125 @@
 
 <body>
 
-  <main class="card">
-
-    <div class="badge">Odoo 18</div>
-
-    <h1>Certificación funcional de Odoo 18</h1>
-
-    <p class="nombre">
+<header>
+  <nav class="nav">
+    <a class="brand" href="../">
       Luis Gerardo Salva Luna
-    </p>
+    </a>
 
-    <p class="descripcion">
-      Certificación otorgada por Odoo S.A. tras completar
-      satisfactoriamente la Certificación Funcional de Odoo 18
-      en español.
-    </p>
+    <a class="back" href="../">
+      ← Mis certificaciones
+    </a>
+  </nav>
+</header>
 
-    <section class="datos">
+<main>
 
-      <div class="dato">
-        <span>Emitido por</span>
-        <strong>Odoo S.A.</strong>
+  <article class="credential">
+
+    <!-- INFORMACIÓN -->
+
+    <section class="info">
+
+      <p class="eyebrow">
+        Credencial profesional
+      </p>
+
+      <h1>
+        Certificación funcional de Odoo 18
+      </h1>
+
+      <p class="holder">
+        Luis Gerardo Salva Luna
+      </p>
+
+      <p class="description">
+        Certificación otorgada por Odoo S.A. tras completar
+        satisfactoriamente la Certificación Funcional de Odoo 18
+        en español.
+      </p>
+
+      <div class="status">
+        <span class="check">✓</span>
+        Certificación obtenida
       </div>
 
-      <div class="dato">
-        <span>Fecha de obtención</span>
-        <strong>12 de septiembre de 2026</strong>
+      <div class="data">
+
+        <div class="data-item">
+          <span>Emitido por</span>
+          <strong>Odoo S.A.</strong>
+        </div>
+
+        <div class="data-item">
+          <span>Fecha de obtención</span>
+          <strong>12 de septiembre de 2026</strong>
+        </div>
+
+        <div class="data-item">
+          <span>Certificación</span>
+          <strong>Odoo 18 Functional</strong>
+        </div>
+
+        <div class="data-item">
+          <span>N.º de certificado</span>
+          <strong>0001212178</strong>
+        </div>
+
       </div>
 
-      <div class="dato">
-        <span>Certificación</span>
-        <strong>Odoo 18 Functional</strong>
-      </div>
+      <div class="actions">
 
-      <div class="dato">
-        <span>N.º de certificado</span>
-        <strong>0001212178</strong>
+        <a class="button primary"
+           href="certificado-odoo-18.pdf"
+           target="_blank"
+           rel="noopener">
+          Ver certificado original ↗
+        </a>
+
+        <a class="button secondary"
+           href="../">
+          Todas mis certificaciones
+        </a>
+
       </div>
 
     </section>
 
-    <a class="boton"
-       href="certificado-odoo-18.pdf"
-       target="_blank"
-       rel="noopener">
-       Ver certificado original
-    </a>
+    <!-- VISTA PREVIA -->
 
-    <p class="nota">
-      Esta página funciona como una presentación pública de la
-      certificación. El certificado mostrado fue emitido por Odoo S.A.
-    </p>
+    <section class="preview-area">
 
-  </main>
+      <div class="certificate-frame">
+
+        <iframe
+          src="certificado-odoo-18.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          title="Certificado Odoo 18 de Luis Gerardo Salva Luna">
+        </iframe>
+
+        <p class="preview-caption">
+          Certificado original emitido por Odoo S.A.
+        </p>
+
+      </div>
+
+    </section>
+
+  </article>
+
+  <p class="disclaimer">
+    Esta página es una presentación personal de la credencial.
+    La certificación y el documento original mostrado fueron emitidos
+    por Odoo S.A. Esta página no constituye un sistema oficial de
+    verificación de Odoo.
+  </p>
+
+</main>
+
+<footer>
+  <span>© 2026 Luis Gerardo Salva Luna</span>
+  <span>Portafolio de certificaciones profesionales</span>
+</footer>
 
 </body>
 </html>
