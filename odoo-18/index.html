@@ -276,13 +276,16 @@
       transform: translateY(-4px);
     }
 
-    .certificate-frame iframe {
+    .certificate-link {
+      display: block;
+      text-decoration: none;
+    }
+
+    .certificate-frame img {
       display: block;
       width: 100%;
-      height: 390px;
-      border: 0;
+      height: auto;
       border-radius: 7px;
-      background: white;
     }
 
     .preview-caption {
@@ -343,10 +346,6 @@
       .certificate-frame {
         max-width: 600px;
       }
-
-      .certificate-frame iframe {
-        height: 430px;
-      }
     }
 
     @media (max-width: 550px) {
@@ -389,10 +388,6 @@
         padding: 28px 15px;
       }
 
-      .certificate-frame iframe {
-        height: 300px;
-      }
-
       footer {
         flex-direction: column;
         padding: 25px 20px 35px;
@@ -405,6 +400,7 @@
 
 <header>
   <nav class="nav">
+
     <a class="brand" href="../">
       Luis Gerardo Salva Luna
     </a>
@@ -412,6 +408,7 @@
     <a class="back" href="../">
       ← Mis certificaciones
     </a>
+
   </nav>
 </header>
 
@@ -488,16 +485,23 @@
 
     </section>
 
-    <!-- VISTA PREVIA -->
+    <!-- VISTA PREVIA DEL CERTIFICADO -->
 
     <section class="preview-area">
 
       <div class="certificate-frame">
 
-        <iframe
-          src="certificado-odoo-18.pdf#toolbar=0&navpanes=0&scrollbar=0"
-          title="Certificado Odoo 18 de Luis Gerardo Salva Luna">
-        </iframe>
+        <a class="certificate-link"
+           href="certificado-odoo-18.pdf"
+           target="_blank"
+           rel="noopener"
+           title="Abrir certificado original">
+
+          <img
+            src="certificado-odoo-18.png"
+            alt="Certificado funcional de Odoo 18 de Luis Gerardo Salva Luna">
+
+        </a>
 
         <p class="preview-caption">
           Certificado original emitido por Odoo S.A.
@@ -519,8 +523,15 @@
 </main>
 
 <footer>
-  <span>© 2026 Luis Gerardo Salva Luna</span>
-  <span>Portafolio de certificaciones profesionales</span>
+
+  <span>
+    © 2026 Luis Gerardo Salva Luna
+  </span>
+
+  <span>
+    Portafolio de certificaciones profesionales
+  </span>
+
 </footer>
 
 </body>
